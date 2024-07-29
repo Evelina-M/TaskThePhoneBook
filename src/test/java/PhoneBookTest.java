@@ -25,4 +25,12 @@ public class PhoneBookTest {
         assertEquals("555-1212", phoneBook.findByName("John Doe"));
         assertNull(phoneBook.findByName("Jane Doe"));
     }
+
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("John Doe", "555-1212");
+        phoneBook.add("Jane Doe", "555-1213");
+        assertEquals("John Doe\nJane Doe", phoneBook.printAllNames());
+    }
 }
