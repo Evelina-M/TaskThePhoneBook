@@ -27,6 +27,10 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (String name : contacts.keySet()) {
+            sb.append(name).append("\n");
+        }
+        return sb.toString().trim();
     }
 }
