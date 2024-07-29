@@ -14,6 +14,11 @@ public class PhoneBook {
     }
 
     public String findByNumber(String number) {
+        for (Map.Entry<String, String> contact : contacts.entrySet()) {
+            if (contact.getValue().equals(number)) {
+                return contact.getKey();
+            }
+        }
         return null;
     }
 }

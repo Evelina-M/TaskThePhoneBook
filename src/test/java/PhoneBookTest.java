@@ -15,5 +15,6 @@ public class PhoneBookTest {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("John Doe", "555-1212");
         assertEquals("John Doe", phoneBook.findByNumber("555-1212"));
+        assertNull(phoneBook.findByNumber("555-1213"));
     }
 }
